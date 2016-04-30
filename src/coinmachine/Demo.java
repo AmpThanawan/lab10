@@ -58,10 +58,12 @@ public class Demo {
 	 */
 	public static void main(String[] args) {
 		final int capacity = 10;  // how many coins the machine can hold
-		
+		Coin coin = new Coin(5);
 		CoinMachine machine = new CoinMachine( capacity );
 		Demo demo = new Demo();
 		//TODO add observers
+		machine.addObserver(coin);
+		
 		demo.insertDialog(machine);
 	}
 }
